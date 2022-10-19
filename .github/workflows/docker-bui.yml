@@ -7,7 +7,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    
     steps:
+    - uses: actions/checkout@v2
+    
     - name: Build Docker Image
       run: cd SimpleApiWithEfInDocker; docker build --no-cache -t example-dotnet-app .
